@@ -1,20 +1,21 @@
-.right-panel{
-    float: right;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+.main-top{
+    background-color: #3b4044;
+    padding: 15px;
 }
-.right-panel ul{
-    float: right;
-}
-.right-panel > ul li{
+.user-panel-links > ul li{
     float: left;
     margin-right: 10px;
     list-style-type: none;
 }
-.left-panel{
+.user-panel-links ul {
+    float: right;
 }
-.main-top{
-    background-color: #0c5460;
-    height: 100px;
+.applyY a{
+    color: #d4b04f;
+}
+.applyW{
+    color: #c3c7ca;
+}
+a:hover {
+    text-decoration: none !important;
 }
