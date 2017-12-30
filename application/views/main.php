@@ -8,8 +8,7 @@
         <link href="<?php echo base_url() ?>public/css/custom.css" type="text/css" rel="stylesheet"/> 
         <!--<link href="http://localhost:8080/wakukayaweb/public/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>--> 
         <!--<link href="http://localhost:8080/wakukayaweb/public/open-iconic/font/css/open-iconic.css" type="text/css" rel="stylesheet"/>-->
-        <link href="<?php echo base_url() ?>public/font-awesome-4.7.0/css/font-awesome.min.css"
-              <link href="http://localhost/wakukayawebApp/public/css/custom.css" type="text/css" rel="stylesheet"/> 
+        <link href="<?php echo base_url() ?>public/font-awesome-4.7.0/css/font-awesome.min.css" />
     </head>
     <body>
         <div class="container-fluid">
