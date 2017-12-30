@@ -8,10 +8,13 @@
         <link href="<?php echo base_url() ?>public/css/custom.css" type="text/css" rel="stylesheet"/> 
         <!--<link href="http://localhost:8080/wakukayaweb/public/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>--> 
         <!--<link href="http://localhost:8080/wakukayaweb/public/open-iconic/font/css/open-iconic.css" type="text/css" rel="stylesheet"/>-->
-        <link href="<?php echo base_url() ?>public/font-awesome-4.7.0/css/font-awesome.min.css"
-              <link href="http://localhost/wakukayawebApp/public/css/custom.css" type="text/css" rel="stylesheet"/> 
+        <link href="<?php echo base_url() ?>public/font-awesome-4.7.0/css/font-awesome.min.css"/>
+        <link href="http://localhost/wakukayawebApp/public/css/custom.css" type="text/css" rel="stylesheet"/> 
     </head>
     <body>
+        <?php 
+        $size = 8;
+        ?>
         <div class="container-fluid">
             <div class="row main-top">
                 <div class="col-sm-4 logo">
@@ -47,53 +50,58 @@
             </div>
         </nav>
 
-        <div class="col-sm-10 offset-1 window">
-            <div class="row row-items" style="">
-                <div class="col-sm-3 commands">
+        <div class="col-sm-12">
+            <div class="row col-sm-10 offset-1 window">
+                <div class="col-md-3 commands">
                     the commands go here
                 </div>
-                <div class="col-sm-9">
-                    <div class="col-sm-12 title">
-                        Please supply Your details:
-                    </div>
-                    <form class="">
-                        <div class="form-group">
-                            <label class=""> </label>
-                            <input type="text" name="firstname" class="form-control" placeholder="Enter First name"/>
+                <div class="col-md-9">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="firstname">First Name</label>
+                                <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="middlename">Middle Name</label>
+                                <input type="text" class="form-control" id="middlename" placeholder="Middle Name">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="surname">Surname(Optional)</label>
+                                <input type="text" class="form-control" id="surname" placeholder="Surname">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="sr-only">Middle name</label>
-                            <input type="text" name="middlename" class="form-control" placeholder="Enter Middle name"/>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="gender">Gender</label>
+                                <select class="form-control col-md-4" id="gender">
+                                    <option>Male       </option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="phonenumber">Phone Number</label>
+                                <input type="text" class="form-control" id="phonenumber" placeholder="Phone number">
+                            </div>
+                             <div class="form-group col-md-4">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email" placeholder="Email Address">
+                            </div>
+                            
                         </div>
-                        <div>
-                            <label class="sr-only">Surname</label>
-                            <input type="text" name="surname" class="form-control" placeholder="Enter Surname"/>
+                        <div class="">
+                            <label for="picture">Upload Picture(Optional)</label>
+                            <input type="file" class="form-control" id="picture"/>
                         </div>
-                        <div class="form-group">
-                            <select class="form-control">
-                                <option>Male</option>
-                                <option>Female</option>
-                            </select>
+                        <div style="margin-top: 30px;">
+                        <button type="submit" class="btn btn-primary">Register</button>
                         </div>
-                        <div>
-                            <label class="sr-only">Surname</label>
-                            <input type="text" name="surname" class="form-control" placeholder="Enter Phone number"/>
-                        </div>
-                        <div>
-                            <label class="sr-only">Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Enter email address"/>
-                        </div>
-                        <input class="form-control" type="file" name="pic" />
-                        <button type="submit" class="btn btn-outline-primary"> Submit  </button>
-                        
-
                     </form>
                 </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 
 
 </body>
