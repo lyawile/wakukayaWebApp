@@ -56,7 +56,7 @@ class Member extends CI_Controller {
                         'required' => 'You must provide %s'
                     )
                 )
-                    );
+            );
             $this->form_validation->set_rules($config); // validates the input values 
             if ($this->form_validation->run() == FALSE) {
                 $this->load->view('main');
@@ -89,12 +89,19 @@ class Member extends CI_Controller {
         }
     }
 
-    public function validatePhoneNumber($phoneNumber) {
-        if (preg_match('/^[0][6-7][5-9][2-9][0-9][0-9][0-9][0-9][0-9][0-9]$/', $phoneNumber)) {
-            return TRUE;
-        } else {
-            $this->form_validation->set_message('validatePhoneNumber', 'The %s is invalid');
-            return FALSE;
+    function validatePhoneNumber($phoneNumber) {
+        if ($phoneNumber !== "") {
+            if (substr($phoneNumber, 0, 4) === "+255") {
+                $restNumberPattern = substr($phoneNumber, 4, 9);
+                $code = 0;
+                $phoneNumber = $code . $restNumberPattern;
+            }
+            if (preg_match('/^[0][6-7][1-9][2-9][0-9][0-9][0-9][0-9][0-9][0-9]$/', $phoneNumber)) {
+                return TRUE;
+            } else {
+                $this->form_validation->set_message('validatePhoneNumber', 'The %s is invalid');
+                return FALSE;
+            }
         }
     }
 
