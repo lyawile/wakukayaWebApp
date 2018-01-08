@@ -11,6 +11,7 @@
         <?php
         $size = 8;
         ?>
+        
         <div class="container-fluid">
             <div class="row main-top">
                 <div class="col-sm-4 logo">
@@ -52,6 +53,7 @@
                     <!--the commands go here-->
                 </div>
                 <div class="col-md-9">
+                    <?php if(isset($message)) echo $message; ?>
                     <?php echo form_open('member/register') ?>
                     <div class="form-row">
                         <?php ?>
