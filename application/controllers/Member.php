@@ -61,7 +61,9 @@ class Member extends CI_Controller {
             if ($this->form_validation->run() == FALSE) {
                 $this->load->view('main');
             } else {
-                echo "Successfully passed";
+                // LOAD THE MODEL TO HAND THE FORM POST DATA
+                $this->load->model('register_model');
+                $this->register_model->register();
             }
         }
     }
@@ -88,7 +90,6 @@ class Member extends CI_Controller {
             }
         }
     }
-
     function validatePhoneNumber($phoneNumber) {
         if ($phoneNumber !== "") {
             if (substr($phoneNumber, 0, 4) === "+255") {
