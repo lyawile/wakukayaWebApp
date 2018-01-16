@@ -101,9 +101,9 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="gender">Gender</label>
-                            <select class="form-control col-md-4" id="gender">
-                                <option>Male       </option>
-                                <option>Female</option>
+                            <select class="form-control col-md-4" id="gender" name="gender">
+                                <option value="male">Male       </option>
+                                <option value="female">Female</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">

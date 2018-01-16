@@ -7,6 +7,7 @@ class register_model extends CI_Model {
         $middlename = $this->input->post('middlename');
         $surname = $this->input->post('surname');
         $phoneNumber = $this->input->post('phonenumber');
+        $gender = $this->input->post('gender');
         // check if phone number exiests
         $result = $this->db->get_where('register', array('mobile' => $phoneNumber));
         if ($result->num_rows() == 0) {
@@ -14,7 +15,8 @@ class register_model extends CI_Model {
             $data = array(
                 'fName' => $firstname,
                 'sName' => $surname,
-                'mobile' => $phoneNumber
+                'mobile' => $phoneNumber,
+                'gender' => $gender
             );
             $result = $this->db->insert('register', $data);
             $data['message'] = "successfully inserted";
