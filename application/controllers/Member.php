@@ -7,12 +7,14 @@ class Member extends CI_Controller {
         $this->load->library(array('session'));
     }
 
-    public function index() {
-        $this->load->view('register');
+    public function dashboard() {
+        $data['content'] = 'dashboard';
+        $this->load->view('main_layout', $data);
     }
 
     public function home() {
-        $this->load->view('main');
+        $data['content'] = 'register_user';
+        $this->load->view('main_layout', $data);
     }
 
     public function register() {
@@ -59,7 +61,8 @@ class Member extends CI_Controller {
             );
             $this->form_validation->set_rules($config); // validates the input values 
             if ($this->form_validation->run() == FALSE) {
-                $this->load->view('main');
+                $data['content'] = 'register_user';
+                $this->load->view('main_layout', $data);
             } else {
                 // LOAD THE MODEL TO HAND THE FORM POST DATA
                 $this->load->model('register_model');
