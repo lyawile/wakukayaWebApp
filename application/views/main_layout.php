@@ -4,6 +4,7 @@
         <title>WAKUKAYA WEB APPLICATION</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--<link href="../../public/css/bootstrap3.3.7.min.css" rel="stylesheet" type="text/css"/>-->
         <link href="<?php echo base_url() ?>public/css/bootstrap.min.css" type="text/css" rel="stylesheet"/> 
         <link href="<?php echo base_url() ?>public/css/custom.css" type="text/css" rel="stylesheet"/> 
     </head>

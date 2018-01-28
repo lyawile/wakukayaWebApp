@@ -45,3 +45,25 @@ nav{
 .form-group p{
     margin-bottom: 0px;
 }
+/*css for dashboard tabs*/
+.dash{
+    list-style: none;
+
+}
+.dash li{
+    float: left;
+    margin-right: 20px;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 80px;
+    text-align: center;
+}
+.current{
+    background-color: blue;
+     color: #f5f5f5;
+}
+.dash{
+    border-bottom: 1px solid blue;
+    height: 40px;
+}
